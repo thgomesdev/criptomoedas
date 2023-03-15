@@ -1,9 +1,9 @@
 import ScrollSmooth from './modules/scroll-smooth.js';
 import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabnav.js';
-import initScrollAnimation from './modules/scroll-animation.js';
 import Modal from './modules/modal.js';
 
+import initScrollAnimation from './modules/scroll-animation.js';
 import initTooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
