@@ -2,9 +2,9 @@ import ScrollSmooth from './modules/scroll-smooth.js';
 import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
+import Tooltip from './modules/tooltip.js';
 
 import initScrollAnimation from './modules/scroll-animation.js';
-import initTooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFetchCriptos from './modules/fetch-criptos.js';
@@ -23,8 +23,10 @@ tabNav.init();
 const modal = new Modal("[data-modal='abrir']", "[data-modal='fechar']", '.modal-container');
 modal.init();
 
+const tooltip = new Tooltip('[data-tooltip]');
+tooltip.init();
+
 initScrollAnimation();
-initTooltip();
 initDropdownMenu();
 initMenuMobile();
 initFetchCriptos();
