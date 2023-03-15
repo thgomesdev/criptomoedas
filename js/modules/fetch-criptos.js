@@ -1,4 +1,4 @@
-import initNumbersAnimation from './numbers-animation.js';
+import AnimateNumbers from './animate-numbers.js';
 
 export default function initFetchCriptos() {
   function createCripto(cripto) {
@@ -20,7 +20,8 @@ export default function initFetchCriptos() {
         numerosGrid.appendChild(divCripto);
       });
 
-      initNumbersAnimation();
+      const animateNumbers = new AnimateNumbers('[data-number]', '.numeros', 'ativo');
+      animateNumbers.init();
     } catch (error) {
       console.log(error);
     }
