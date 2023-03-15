@@ -3,11 +3,11 @@ import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
+import fetchCriptos from './modules/fetch-criptos.js';
 
 import initScrollAnimation from './modules/scroll-animation.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
-import initFetchCriptos from './modules/fetch-criptos.js';
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
 import initFuncionamento from './modules/funcionamento.js';
 
@@ -26,9 +26,10 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
+fetchCriptos('../criptos-api.json', '.numeros-grid');
+
 initScrollAnimation();
 initDropdownMenu();
 initMenuMobile();
-initFetchCriptos();
 initFetchBitcoin();
 initFuncionamento();
