@@ -33,7 +33,7 @@ export default class AnimateNumbers {
   handleMutation(mutation) {
     if (mutation[0].target.classList.contains(this.observerClass)) {
       this.observer.disconnect();
-      this.numbersAnimation();
+      this.animateNumbers();
     }
   }
 
