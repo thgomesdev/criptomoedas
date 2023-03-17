@@ -26,7 +26,8 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-fetchCriptos('../criptos-api.json', '.numeros-grid');
+const { pathname } = window.location;
+fetchCriptos(`${pathname}criptos-api.json`, '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
 const scrollAnimate = new ScrollAnimate("[data-animation='scroll']");
