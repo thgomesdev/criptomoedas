@@ -7,8 +7,8 @@ import fetchCriptos from './modules/fetch-criptos.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 import ScrollAnimate from './modules/scroll-animate.js';
 import DropdownMenu from './modules/dropdown-menu.js';
+import MenuMobile from './modules/menu-mobile.js';
 
-import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 
 const scrollSmooth = new ScrollSmooth('[data-menu="smooth"] a[href^="#"]');
@@ -36,6 +36,7 @@ scrollAnimate.init();
 const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
 
 initFuncionamento();
