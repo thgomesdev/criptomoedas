@@ -9,6 +9,7 @@ import ScrollAnimate from './modules/scroll-animate.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 import Funcionamento from './modules/funcionamento.js';
+import SlideNav from './modules/slide.js';
 
 const scrollSmooth = new ScrollSmooth('[data-menu="smooth"] a[href^="#"]');
 scrollSmooth.init();
@@ -39,3 +40,7 @@ menuMobile.init();
 
 const funcionamento = new Funcionamento('[data-semana]');
 funcionamento.init();
+
+const slide = new SlideNav('.slide-wrapper', '.slide');
+slide.init();
+slide.addControl('.custom-controls');
