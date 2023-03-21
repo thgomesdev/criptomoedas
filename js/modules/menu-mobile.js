@@ -4,13 +4,14 @@ export default class MenuMobile {
   constructor(menuButton, menuList) {
     this.menuButton = document.querySelector(menuButton);
     this.menuList = document.querySelector(menuList);
-    this.events = ['click', 'touchstart'];
+    this.events = ['touchstart', 'click'];
     this.activeClass = 'active';
 
     this.openMenu = this.openMenu.bind(this);
   }
 
-  openMenu() {
+  openMenu(event) {
+    event.preventDefault();
     this.menuList.classList.add(this.activeClass);
     this.menuButton.classList.add(this.activeClass);
     outsideClick(this.menuList, this.events, () => {

@@ -51,7 +51,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 0.875rem;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -70,7 +70,7 @@ body {
 }
 
 .titulo {
-  font-family: "Playfair Display SC";
+  font-family: 'Playfair Display SC';
   font-size: 6rem;
   line-height: 1;
   font-weight: 400;
@@ -79,7 +79,7 @@ body {
 }
 
 .criptomoedas h2 {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 1rem;
 
   text-transform: uppercase;
@@ -89,7 +89,7 @@ body {
 }
 
 .criptomoedas h2::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 30px;
   height: 7px;
@@ -138,7 +138,7 @@ body {
 }
 
 .faq-lista dt {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
@@ -146,7 +146,7 @@ body {
 }
 
 .faq-lista dt::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 20px;
   height: 7px;
@@ -172,7 +172,7 @@ body {
   font-family: Helvetica, Arial;
 }
 .dados li::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 20px;
   height: 7px;
@@ -181,7 +181,7 @@ body {
 }
 
 .copy {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
@@ -228,17 +228,17 @@ body {
   }
 }
 
-.js [data-tab="content"] section {
+.js [data-tab='content'] section {
   display: none;
 }
 
-[data-tab="content"] section.ativo {
+[data-tab='content'] section.ativo {
   display: block !important;
 }
-[data-tab="content"] section.ativo.show-right {
+[data-tab='content'] section.ativo.show-right {
   animation: show-right 1.5s forwards;
 }
-[data-tab="content"] section.ativo.show-down {
+[data-tab='content'] section.ativo.show-down {
   animation: show-down 1.5s forwards;
 }
 
@@ -264,19 +264,26 @@ body {
   }
 }
 
-[data-animation="accordion"] dt::after {
-  content: "⮧";
+[data-animation='accordion'] dt::after {
+  filter: invert(41%) sepia(92%) saturate(2236%) hue-rotate(165deg) brightness(100%) contrast(101%);
+  content: '';
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background: url('../img/arrow-red.svg') no-repeat center center;
+  transform: rotate(90deg);
+  transition: transform 0.3s;
   margin-left: 10px;
 }
-[data-animation="accordion"] dt.ativo::after {
-  content: "⮥";
-  margin-left: 10px;
+[data-animation='accordion'] dt.ativo::after {
+  content: '';
+  transform: rotate(-90deg);
 }
 
-.js [data-animation="accordion"] dd {
+.js [data-animation='accordion'] dd {
   display: none;
 }
-[data-animation="accordion"] dd.ativo {
+[data-animation='accordion'] dd.ativo {
   display: block !important;
   animation: slideDown 0.5s forwards;
 }
@@ -292,13 +299,13 @@ body {
   }
 }
 
-.js [data-animation="scroll"] {
+.js [data-animation='scroll'] {
   opacity: 0;
   transition: 1.5s;
   transform: translate3d(-20px, 0, 0);
 }
 
-.js [data-animation="scroll"].ativo {
+.js [data-animation='scroll'].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
@@ -313,7 +320,7 @@ body {
 
 [data-semana]::after {
   display: inline-block;
-  content: "";
+  content: '';
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -324,4 +331,12 @@ body {
 
 [data-semana].aberto::after {
   background-color: rgb(0, 255, 0);
+}
+
+.arrow-black {
+  background: url('../img/arrow.svg') no-repeat center center;
+  background-size: 8px;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
 }
